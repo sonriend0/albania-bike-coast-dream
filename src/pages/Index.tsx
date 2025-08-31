@@ -5,7 +5,6 @@ import { DestinoSection } from "@/components/sections/DestinoSection";
 import { RutaSection } from "@/components/sections/RutaSection";
 import { NosotrosSection } from "@/components/sections/NosotrosSection";
 import { ContactoSection } from "@/components/sections/ContactoSection";
-
 const Index = () => {
   const [activeSection, setActiveSection] = useState("inicio");
 
@@ -18,7 +17,6 @@ const Index = () => {
       nosotros: "Quiénes Somos - Albania Coast Dreams",
       contacto: "Contacto - Reserva tu Aventura"
     };
-
     const descriptions = {
       inicio: "Experiencia cicloturista única por la costa albanesa. De Tirana a Corfú en 10 días. Riviera mediterránea, grupos pequeños, todo incluido.",
       destino: "Descubre Albania, el secreto mejor guardado del Mediterráneo. Costas vírgenes, montañas épicas y cultura auténtica.",
@@ -26,18 +24,15 @@ const Index = () => {
       nosotros: "Equipo especializado en cicloturismo con 15 años de experiencia. Pasión auténtica por Albania y grupos pequeños.",
       contacto: "Reserva tu aventura cicloturista en Albania. Contacto directo, información detallada y facilidades de pago."
     };
-
     document.title = titles[activeSection as keyof typeof titles];
-    
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', descriptions[activeSection as keyof typeof descriptions]);
     }
   }, [activeSection]);
-
   const handleSectionChange = (section: string) => {
     setActiveSection(section);
-    
+
     // Smooth scroll to section
     if (section !== "inicio") {
       const element = document.getElementById(section);
@@ -62,7 +57,6 @@ const Index = () => {
     const handleScroll = () => {
       const sections = ['inicio', 'destino', 'ruta', 'nosotros', 'contacto'];
       const scrollPosition = window.scrollY + 100;
-
       for (let i = sections.length - 1; i >= 0; i--) {
         const element = document.getElementById(sections[i]);
         if (element && scrollPosition >= element.offsetTop) {
@@ -70,19 +64,16 @@ const Index = () => {
           break;
         }
       }
-      
+
       // Special case for hero section
       if (scrollPosition < 100) {
         setActiveSection('inicio');
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Header activeSection={activeSection} onSectionChange={handleSectionChange} />
       
       <main>
@@ -134,12 +125,10 @@ const Index = () => {
           
           <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-primary-foreground/60">
             <p>&copy; 2024 Albania Coast Dreams. Todos los derechos reservados.</p>
-            <p className="mt-2 text-sm">Licencia de Agencia de Viajes: AAVV-2024-001</p>
+            <p className="mt-2 text-sm">Licencia de Agencia de Viajes: AAVV-20</p>
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
