@@ -3,137 +3,123 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Mountain, Utensils, Bed, Camera } from "lucide-react";
 import routeMapImage from "@/assets/route-map.jpg";
-
 export const RutaSection = () => {
-  const routeDays = [
-    {
-      day: 1,
-      title: "Llegada a Tirana",
-      distance: "0 km",
-      difficulty: "Descanso",
-      location: "Tirana",
-      description: "Recepción en el aeropuerto, traslado al hotel y bienvenida. Briefing del viaje y prueba de bicicletas.",
-      highlights: ["Check-in hotel boutique", "Cena de bienvenida", "Ajuste de bicicletas"],
-      accommodation: "Hotel Boutique Tirana 4*"
-    },
-    {
-      day: 2,
-      title: "Tirana - Durrës",
-      distance: "45 km",
-      difficulty: "Fácil",
-      location: "Durrës",
-      description: "Primera etapa suave por la llanura costera hasta llegar al puerto histórico de Durrës.",
-      highlights: ["Anfiteatro romano", "Museo arqueológico", "Paseo marítimo"],
-      accommodation: "Hotel Vila Durrës 4*"
-    },
-    {
-      day: 3,
-      title: "Durrës - Vlorë",
-      distance: "85 km",
-      difficulty: "Moderado",
-      location: "Vlorë",
-      description: "Ruta costera espectacular siguiendo la bahía hasta Vlorë, donde nace la Riviera Albanesa.",
-      highlights: ["Museo de la Independencia", "Isla Sazan vista", "Atardecer en el puerto"],
-      accommodation: "Hotel Vlora International 4*"
-    },
-    {
-      day: 4,
-      title: "Vlorë - Himarë",
-      distance: "72 km",
-      difficulty: "Desafiante",
-      location: "Himarë",
-      description: "La etapa reina: el paso de Llogara con vistas épicas seguido del descenso a la Riviera.",
-      highlights: ["Paso de Llogara (1,000m)", "Vista panorámica 360°", "Descenso a Himarë"],
-      accommodation: "Hotel Villa Himare 4*"
-    },
-    {
-      day: 5,
-      title: "Día de Descanso en Himarë",
-      distance: "Opcional 25 km",
-      difficulty: "Relax",
-      location: "Himarë",
-      description: "Día libre para explorar playas vírgenes, snorkel o ruta opcional a Dhërmi.",
-      highlights: ["Playa Jale", "Snorkel en aguas cristalinas", "Pueblos tradicionales"],
-      accommodation: "Hotel Villa Himare 4*"
-    },
-    {
-      day: 6,
-      title: "Himarë - Sarandë",
-      distance: "58 km",
-      difficulty: "Moderado",
-      location: "Sarandë",
-      description: "Ruta costera con múltiples playas y calas, llegada a la perla del sur albanés.",
-      highlights: ["Porto Palermo", "Múltiples paradas en playas", "Centro de Sarandë"],
-      accommodation: "Hotel Mediterrane 4*"
-    },
-    {
-      day: 7,
-      title: "Sarandë - Butrint - Ksamil",
-      distance: "35 km",
-      difficulty: "Fácil",
-      location: "Ksamil",
-      description: "Visita al sitio arqueológico de Butrint (UNESCO) y las 'Maldivas de Albania' en Ksamil.",
-      highlights: ["Butrint (Patrimonio UNESCO)", "Islas de Ksamil", "Aguas turquesas"],
-      accommodation: "Resort Ksamil 4*"
-    },
-    {
-      day: 8,
-      title: "Ferry a Corfú",
-      distance: "30 km",
-      difficulty: "Fácil",
-      location: "Corfú",
-      description: "Ferry matutino a Corfú y tarde explorando la ciudad vieja patrimonio de la humanidad.",
-      highlights: ["Ferry Sarandë-Corfú", "Ciudad Vieja UNESCO", "Arquitectura veneciana"],
-      accommodation: "Hotel Corfu Palace 4*"
-    },
-    {
-      day: 9,
-      title: "Exploración de Corfú",
-      distance: "45 km",
-      difficulty: "Moderado",
-      location: "Corfú",
-      description: "Ruta circular por la isla verde de Grecia: Paleokastritsa, Angelokastro y Palacio Achillion.",
-      highlights: ["Monasterio Paleokastritsa", "Castillo Angelokastro", "Palacio Sisí"],
-      accommodation: "Hotel Corfu Palace 4*"
-    },
-    {
-      day: 10,
-      title: "Despedida",
-      distance: "0 km",
-      difficulty: "Descanso",
-      location: "Corfú",
-      description: "Último desayuno juntos y traslados al aeropuerto según horarios de vuelo.",
-      highlights: ["Desayuno de despedida", "Intercambio de contactos", "Traslado al aeropuerto"],
-      accommodation: "Fin del programa"
-    }
-  ];
-
+  const routeDays = [{
+    day: 1,
+    title: "Llegada a Tirana",
+    distance: "0 km",
+    difficulty: "Descanso",
+    location: "Tirana",
+    description: "Recepción en el aeropuerto, traslado al hotel y bienvenida. Briefing del viaje y prueba de bicicletas.",
+    highlights: ["Check-in hotel boutique", "Cena de bienvenida", "Ajuste de bicicletas"],
+    accommodation: "Hotel Boutique Tirana 4*"
+  }, {
+    day: 2,
+    title: "Tirana - Durrës",
+    distance: "45 km",
+    difficulty: "Fácil",
+    location: "Durrës",
+    description: "Primera etapa suave por la llanura costera hasta llegar al puerto histórico de Durrës.",
+    highlights: ["Anfiteatro romano", "Museo arqueológico", "Paseo marítimo"],
+    accommodation: "Hotel Vila Durrës 4*"
+  }, {
+    day: 3,
+    title: "Durrës - Vlorë",
+    distance: "85 km",
+    difficulty: "Moderado",
+    location: "Vlorë",
+    description: "Ruta costera espectacular siguiendo la bahía hasta Vlorë, donde nace la Riviera Albanesa.",
+    highlights: ["Museo de la Independencia", "Isla Sazan vista", "Atardecer en el puerto"],
+    accommodation: "Hotel Vlora International 4*"
+  }, {
+    day: 4,
+    title: "Vlorë - Himarë",
+    distance: "72 km",
+    difficulty: "Desafiante",
+    location: "Himarë",
+    description: "La etapa reina: el paso de Llogara con vistas épicas seguido del descenso a la Riviera.",
+    highlights: ["Paso de Llogara (1,000m)", "Vista panorámica 360°", "Descenso a Himarë"],
+    accommodation: "Hotel Villa Himare 4*"
+  }, {
+    day: 5,
+    title: "Día de Descanso en Himarë",
+    distance: "Opcional 25 km",
+    difficulty: "Relax",
+    location: "Himarë",
+    description: "Día libre para explorar playas vírgenes, snorkel o ruta opcional a Dhërmi.",
+    highlights: ["Playa Jale", "Snorkel en aguas cristalinas", "Pueblos tradicionales"],
+    accommodation: "Hotel Villa Himare 4*"
+  }, {
+    day: 6,
+    title: "Himarë - Sarandë",
+    distance: "58 km",
+    difficulty: "Moderado",
+    location: "Sarandë",
+    description: "Ruta costera con múltiples playas y calas, llegada a la perla del sur albanés.",
+    highlights: ["Porto Palermo", "Múltiples paradas en playas", "Centro de Sarandë"],
+    accommodation: "Hotel Mediterrane 4*"
+  }, {
+    day: 7,
+    title: "Sarandë - Butrint - Ksamil",
+    distance: "35 km",
+    difficulty: "Fácil",
+    location: "Ksamil",
+    description: "Visita al sitio arqueológico de Butrint (UNESCO) y las 'Maldivas de Albania' en Ksamil.",
+    highlights: ["Butrint (Patrimonio UNESCO)", "Islas de Ksamil", "Aguas turquesas"],
+    accommodation: "Resort Ksamil 4*"
+  }, {
+    day: 8,
+    title: "Ferry a Corfú",
+    distance: "30 km",
+    difficulty: "Fácil",
+    location: "Corfú",
+    description: "Ferry matutino a Corfú y tarde explorando la ciudad vieja patrimonio de la humanidad.",
+    highlights: ["Ferry Sarandë-Corfú", "Ciudad Vieja UNESCO", "Arquitectura veneciana"],
+    accommodation: "Hotel Corfu Palace 4*"
+  }, {
+    day: 9,
+    title: "Exploración de Corfú",
+    distance: "45 km",
+    difficulty: "Moderado",
+    location: "Corfú",
+    description: "Ruta circular por la isla verde de Grecia: Paleokastritsa, Angelokastro y Palacio Achillion.",
+    highlights: ["Monasterio Paleokastritsa", "Castillo Angelokastro", "Palacio Sisí"],
+    accommodation: "Hotel Corfu Palace 4*"
+  }, {
+    day: 10,
+    title: "Despedida",
+    distance: "0 km",
+    difficulty: "Descanso",
+    location: "Corfú",
+    description: "Último desayuno juntos y traslados al aeropuerto según horarios de vuelo.",
+    highlights: ["Desayuno de despedida", "Intercambio de contactos", "Traslado al aeropuerto"],
+    accommodation: "Fin del programa"
+  }];
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case "Fácil": return "bg-green-500";
-      case "Moderado": return "bg-yellow-500";
-      case "Desafiante": return "bg-red-500";
-      default: return "bg-gray-500";
+      case "Fácil":
+        return "bg-green-500";
+      case "Moderado":
+        return "bg-yellow-500";
+      case "Desafiante":
+        return "bg-red-500";
+      default:
+        return "bg-gray-500";
     }
   };
-
   const totalStats = {
     distance: "390 km",
     elevation: "4,200 m",
     days: "10 días",
     nights: "9 noches"
   };
-
-  return (
-    <section id="ruta" className="py-20 bg-background">
+  return <section id="ruta" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4 text-lg px-4 py-2">
             🚴 La Ruta
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-            De Tirana a Corfú: 10 Días de Aventura Costera
-          </h2>
+          <h2 className="text-4xl font-bold mb-6 gradient-text md:text-4xl">De Tirana a Corfú: 10 Días de aventura costera</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Una ruta cuidadosamente diseñada que combina desafío, belleza y cultura. 
             Cada etapa ha sido probada y perfeccionada para ofrecerte la experiencia definitiva.
@@ -165,11 +151,7 @@ export const RutaSection = () => {
           <Card className="overflow-hidden">
             <CardContent className="p-0">
               <div className="relative">
-                <img 
-                  src={routeMapImage} 
-                  alt="Mapa de la ruta Tirana-Corfú" 
-                  className="w-full h-64 md:h-96 object-cover"
-                />
+                <img src={routeMapImage} alt="Mapa de la ruta Tirana-Corfú" className="w-full h-64 md:h-96 object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
                   <div className="p-6 text-white">
                     <h3 className="text-2xl font-bold mb-2">Ruta Tirana → Corfú</h3>
@@ -183,11 +165,8 @@ export const RutaSection = () => {
 
         {/* Daily Itinerary */}
         <div className="space-y-6">
-          <h3 className="text-3xl font-bold text-center mb-12 gradient-text">
-            Itinerario Día a Día
-          </h3>
-          {routeDays.map((day, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-coastal transition-all duration-300 group">
+          <h3 className="text-3xl font-bold text-center mb-12 gradient-text">Itinerario día a día</h3>
+          {routeDays.map((day, index) => <Card key={index} className="overflow-hidden hover:shadow-coastal transition-all duration-300 group">
               <CardHeader className="bg-gradient-hero pb-4">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                   <div className="flex items-center space-x-4">
@@ -210,9 +189,7 @@ export const RutaSection = () => {
                       </div>
                     </div>
                   </div>
-                  <Badge 
-                    className={`${getDifficultyColor(day.difficulty)} text-white px-3 py-1`}
-                  >
+                  <Badge className={`${getDifficultyColor(day.difficulty)} text-white px-3 py-1`}>
                     {day.difficulty}
                   </Badge>
                 </div>
@@ -229,12 +206,10 @@ export const RutaSection = () => {
                       Puntos Destacados
                     </h4>
                     <ul className="space-y-1">
-                      {day.highlights.map((highlight, idx) => (
-                        <li key={idx} className="flex items-center text-muted-foreground">
+                      {day.highlights.map((highlight, idx) => <li key={idx} className="flex items-center text-muted-foreground">
                           <span className="w-2 h-2 bg-primary rounded-full mr-3" />
                           {highlight}
-                        </li>
-                      ))}
+                        </li>)}
                     </ul>
                   </div>
                   
@@ -247,16 +222,13 @@ export const RutaSection = () => {
                   </div>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* CTA Section */}
         <div className="text-center mt-16">
           <Card className="bg-gradient-coastal text-primary-foreground p-8">
-            <h3 className="text-2xl font-bold mb-4">
-              ¿Listo para la Aventura de tu Vida?
-            </h3>
+            <h3 className="text-2xl font-bold mb-4">¿Listo para la aventura cicloturista?</h3>
             <p className="text-primary-foreground/90 mb-6 max-w-2xl mx-auto">
               Esta ruta está diseñada para ciclistas con experiencia básica. 
               Incluye todo lo necesario: bicicletas, alojamiento, desayunos y guía especializado.
@@ -267,6 +239,5 @@ export const RutaSection = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
