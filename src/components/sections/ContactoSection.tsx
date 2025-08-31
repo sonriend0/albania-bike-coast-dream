@@ -114,7 +114,13 @@ export const ContactoSection = () => {
                 </p>
               </CardHeader>
               <CardContent>
-                <div className="nimble-form" data-form-id="66efd7e067255057d758b049" data-company-id="62dc9542c71933ab634eb3c1"></div>
+                <div className="min-h-[400px] p-4">
+                  <div className="nimble-form" data-form-id="66efd7e067255057d758b049" data-company-id="62dc9542c71933ab634eb3c1">
+                    <div className="text-center text-muted-foreground py-8">
+                      Cargando formulario de contacto...
+                    </div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>
