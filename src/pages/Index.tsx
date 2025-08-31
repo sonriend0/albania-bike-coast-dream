@@ -116,7 +116,7 @@ const Index = () => {
             <div>
               <h3 className="font-bold mb-4">Síguenos</h3>
               <div className="space-y-2 text-primary-foreground/80">
-                <p>🌐 <a href="https://www.cyclingvan.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground underline">www.cyclingvan.com - Haz clic aquí</a></p>
+                <p>🌐 <a href="https://www.cyclingvan.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground underline">www.cyclingvan.com</a></p>
                 <p>📸 @albaniacoastdreams</p>
                 
               </div>
