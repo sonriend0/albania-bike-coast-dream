@@ -43,7 +43,7 @@ export const ContactoSection = () => {
   const contactInfo = [{
     icon: <Phone className="h-5 w-5" />,
     title: "Teléfono",
-    content: "+34 123 456 789",
+    content: "+34 659 881 000",
     description: "Lunes a Viernes: 9:00 - 18:00"
   }, {
     icon: <Mail className="h-5 w-5" />,
