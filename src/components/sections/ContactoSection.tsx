@@ -114,43 +114,7 @@ export const ContactoSection = () => {
                 </p>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Nombre completo *</Label>
-                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="Tu nombre" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email *</Label>
-                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required placeholder="tu@email.com" />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Teléfono</Label>
-                      <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="+34 123 456 789" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="participants">Número de participantes</Label>
-                      <Input id="participants" name="participants" value={formData.participants} onChange={handleChange} placeholder="2 personas" />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="dates">Fechas preferidas (opcional)</Label>
-                    <Input id="dates" name="dates" value={formData.dates} onChange={handleChange} placeholder="Mayo 2025, fechas flexibles..." />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Mensaje</Label>
-                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={4} placeholder="Cuéntanos sobre tu experiencia ciclista, expectativas del viaje, necesidades especiales..." />
-                  </div>
-
-                  <Button type="submit" variant="hero" size="lg" className="w-full">
-                    Enviar Solicitud
-                  </Button>
-                </form>
+                <div className="nimble-form" data-form-id="66efd7e067255057d758b049" data-company-id="62dc9542c71933ab634eb3c1"></div>
               </CardContent>
             </Card>
           </div>
