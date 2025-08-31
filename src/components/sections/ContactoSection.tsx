@@ -5,24 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  Euro, 
-  Calendar,
-  Users,
-  Bike,
-  Utensils,
-  Bed,
-  Shield,
-  Info
-} from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Euro, Calendar, Users, Bike, Utensils, Bed, Shield, Info } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
 export const ContactoSection = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -31,12 +19,11 @@ export const ContactoSection = () => {
     dates: "",
     participants: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "¡Mensaje enviado!",
-      description: "Te contactaremos en las próximas 24 horas para concretar tu aventura albanesa.",
+      description: "Te contactaremos en las próximas 24 horas para concretar tu aventura albanesa."
     });
     setFormData({
       name: "",
@@ -47,74 +34,61 @@ export const ContactoSection = () => {
       participants: ""
     });
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
-  const contactInfo = [
-    {
-      icon: <Phone className="h-5 w-5" />,
-      title: "Teléfono",
-      content: "+34 123 456 789",
-      description: "Lunes a Viernes: 9:00 - 18:00"
-    },
-    {
-      icon: <Mail className="h-5 w-5" />,
-      title: "Email",
-      content: "info@albaniacoastdreams.com",
-      description: "Respuesta en 24h garantizada"
-    },
-    {
-      icon: <MapPin className="h-5 w-5" />,
-      title: "Oficina",
-      content: "Calle Cicloturismo 23, Madrid",
-      description: "Visitas con cita previa"
-    },
-    {
-      icon: <Clock className="h-5 w-5" />,
-      title: "Horario",
-      content: "Lun-Vie: 9:00-18:00",
-      description: "Sáb: 10:00-14:00"
-    }
-  ];
-
+  const contactInfo = [{
+    icon: <Phone className="h-5 w-5" />,
+    title: "Teléfono",
+    content: "+34 123 456 789",
+    description: "Lunes a Viernes: 9:00 - 18:00"
+  }, {
+    icon: <Mail className="h-5 w-5" />,
+    title: "Email",
+    content: "info@albaniacoastdreams.com",
+    description: "Respuesta en 24h garantizada"
+  }, {
+    icon: <MapPin className="h-5 w-5" />,
+    title: "Oficina",
+    content: "Calle Cicloturismo 23, Madrid",
+    description: "Visitas con cita previa"
+  }, {
+    icon: <Clock className="h-5 w-5" />,
+    title: "Horario",
+    content: "Lun-Vie: 9:00-18:00",
+    description: "Sáb: 10:00-14:00"
+  }];
   const pricing = {
     pricePerPerson: "2,890",
     currency: "€",
-    includes: [
-      "9 noches en hoteles 4* (hab. doble)",
-      "Bicicleta de trekking premium + casco",
-      "Guía especializado bilingüe",
-      "Vehículo de apoyo todo el recorrido",
-      "Desayunos diarios + 3 cenas especiales",
-      "Ferry Sarandë-Corfú",
-      "Entradas a monumentos incluidos",
-      "Seguro de viaje y cancelación",
-      "Traslados aeropuerto incluidos"
-    ],
-    notIncludes: [
-      "Vuelos (gestionamos con descuentos)",
-      "Comidas no especificadas",
-      "Bebidas alcohólicas",
-      "Gastos personales",
-      "Suplemento habitación individual: +490€"
-    ]
+    includes: ["9 noches en hoteles 4* (hab. doble)", "Bicicleta de trekking premium + casco", "Guía especializado bilingüe", "Vehículo de apoyo todo el recorrido", "Desayunos diarios + 3 cenas especiales", "Ferry Sarandë-Corfú", "Entradas a monumentos incluidos", "Seguro de viaje y cancelación", "Traslados aeropuerto incluidos"],
+    notIncludes: ["Vuelos (gestionamos con descuentos)", "Comidas no especificadas", "Bebidas alcohólicas", "Gastos personales", "Suplemento habitación individual: +490€"]
   };
-
-  const nextDepartures = [
-    { date: "15-22 Mayo 2025", status: "Disponible", spots: "3 plazas" },
-    { date: "12-21 Junio 2025", status: "Últimas plazas", spots: "2 plazas" },
-    { date: "10-19 Julio 2025", status: "Disponible", spots: "6 plazas" },
-    { date: "14-23 Agosto 2025", status: "Disponible", spots: "8 plazas" },
-    { date: "11-20 Septiembre 2025", status: "Disponible", spots: "7 plazas" }
-  ];
-
-  return (
-    <section id="contacto" className="py-20 bg-background">
+  const nextDepartures = [{
+    date: "15-22 Mayo 2025",
+    status: "Disponible",
+    spots: "3 plazas"
+  }, {
+    date: "12-21 Junio 2025",
+    status: "Últimas plazas",
+    spots: "2 plazas"
+  }, {
+    date: "10-19 Julio 2025",
+    status: "Disponible",
+    spots: "6 plazas"
+  }, {
+    date: "14-23 Agosto 2025",
+    status: "Disponible",
+    spots: "8 plazas"
+  }, {
+    date: "11-20 Septiembre 2025",
+    status: "Disponible",
+    spots: "7 plazas"
+  }];
+  return <section id="contacto" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4 text-lg px-4 py-2">
@@ -134,9 +108,7 @@ export const ContactoSection = () => {
           <div className="lg:col-span-2">
             <Card className="h-full">
               <CardHeader>
-                <CardTitle className="text-2xl gradient-text">
-                  Solicita Información o Reserva
-                </CardTitle>
+                <CardTitle className="text-2xl gradient-text">Solicita información o reserva</CardTitle>
                 <p className="text-muted-foreground">
                   Completa el formulario y te enviaremos toda la información detallada
                 </p>
@@ -146,73 +118,33 @@ export const ContactoSection = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="name">Nombre completo *</Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        placeholder="Tu nombre"
-                      />
+                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="Tu nombre" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">Email *</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="tu@email.com"
-                      />
+                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required placeholder="tu@email.com" />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <Label htmlFor="phone">Teléfono</Label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="+34 123 456 789"
-                      />
+                      <Input id="phone" name="phone" value={formData.phone} onChange={handleChange} placeholder="+34 123 456 789" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="participants">Número de participantes</Label>
-                      <Input
-                        id="participants"
-                        name="participants"
-                        value={formData.participants}
-                        onChange={handleChange}
-                        placeholder="2 personas"
-                      />
+                      <Input id="participants" name="participants" value={formData.participants} onChange={handleChange} placeholder="2 personas" />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="dates">Fechas preferidas (opcional)</Label>
-                    <Input
-                      id="dates"
-                      name="dates"
-                      value={formData.dates}
-                      onChange={handleChange}
-                      placeholder="Mayo 2025, fechas flexibles..."
-                    />
+                    <Input id="dates" name="dates" value={formData.dates} onChange={handleChange} placeholder="Mayo 2025, fechas flexibles..." />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Mensaje</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={4}
-                      placeholder="Cuéntanos sobre tu experiencia ciclista, expectativas del viaje, necesidades especiales..."
-                    />
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} rows={4} placeholder="Cuéntanos sobre tu experiencia ciclista, expectativas del viaje, necesidades especiales..." />
                   </div>
 
                   <Button type="submit" variant="hero" size="lg" className="w-full">
@@ -225,8 +157,7 @@ export const ContactoSection = () => {
 
           {/* Contact Info */}
           <div className="space-y-6">
-            {contactInfo.map((info, index) => (
-              <Card key={index} className="hover:shadow-card transition-all duration-300">
+            {contactInfo.map((info, index) => <Card key={index} className="hover:shadow-card transition-all duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground">
@@ -245,8 +176,7 @@ export const ContactoSection = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
 
@@ -273,12 +203,10 @@ export const ContactoSection = () => {
                     Incluido en el Precio
                   </h4>
                   <ul className="space-y-1 text-sm">
-                    {pricing.includes.map((item, index) => (
-                      <li key={index} className="flex items-start">
+                    {pricing.includes.map((item, index) => <li key={index} className="flex items-start">
                         <span className="w-2 h-2 bg-primary-foreground rounded-full mr-3 mt-2 flex-shrink-0" />
                         {item}
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </div>
               </div>
@@ -299,12 +227,10 @@ export const ContactoSection = () => {
                     No Incluido
                   </h4>
                   <ul className="space-y-1 text-sm text-muted-foreground">
-                    {pricing.notIncludes.map((item, index) => (
-                      <li key={index} className="flex items-start">
+                    {pricing.notIncludes.map((item, index) => <li key={index} className="flex items-start">
                         <span className="w-2 h-2 bg-muted-foreground rounded-full mr-3 mt-2 flex-shrink-0" />
                         {item}
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </div>
 
@@ -330,8 +256,7 @@ export const ContactoSection = () => {
             Próximas Salidas 2025
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {nextDepartures.map((departure, index) => (
-              <Card key={index} className="hover:shadow-card transition-all duration-300">
+            {nextDepartures.map((departure, index) => <Card key={index} className="hover:shadow-card transition-all duration-300">
                 <CardContent className="p-6 text-center">
                   <div className="mb-4">
                     <Calendar className="h-8 w-8 mx-auto mb-2 text-primary" />
@@ -339,10 +264,7 @@ export const ContactoSection = () => {
                       {departure.date}
                     </h4>
                   </div>
-                  <Badge 
-                    variant={departure.status === "Últimas plazas" ? "destructive" : "secondary"}
-                    className="mb-2"
-                  >
+                  <Badge variant={departure.status === "Últimas plazas" ? "destructive" : "secondary"} className="mb-2">
                     {departure.status}
                   </Badge>
                   <p className="text-muted-foreground text-sm flex items-center justify-center">
@@ -350,11 +272,9 @@ export const ContactoSection = () => {
                     {departure.spots}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
