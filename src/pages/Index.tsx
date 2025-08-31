@@ -107,7 +107,7 @@ const Index = () => {
             <div>
               <h3 className="font-bold mb-4">Contacto</h3>
               <div className="space-y-2 text-primary-foreground/80">
-                <p>📞 +34 123 456 789</p>
+                <p>📞 +34 659 881 000</p>
                 <p>✉️ info@albaniacoastdreams.com</p>
                 <p>📍 Calle Cicloturismo 23, Madrid</p>
               </div>
@@ -116,15 +116,15 @@ const Index = () => {
             <div>
               <h3 className="font-bold mb-4">Síguenos</h3>
               <div className="space-y-2 text-primary-foreground/80">
-                <p>🌐 www.albaniacoastdreams.com</p>
+                <p>🌐 www.cyclingvan.com</p>
                 <p>📸 @albaniacoastdreams</p>
-                <p>📘 Albania Coast Dreams</p>
+                
               </div>
             </div>
           </div>
           
           <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-primary-foreground/60">
-            <p>&copy; 2024 Albania Coast Dreams. Todos los derechos reservados.</p>
+            <p>© 2025 Albania Coast Dreams. Todos los derechos reservados</p>
             <p className="mt-2 text-sm">Licencia de Agencia de Viajes: AAVV-20</p>
           </div>
         </div>
